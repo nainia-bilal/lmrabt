@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800&family=Montserrat:wght@300;400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Cinzel", Georgia, serif;
+  --font-sans: "Montserrat", system-ui, sans-serif;
+  --color-noir: #121212;
+  --color-gold: #E5C158;
+  --color-beige: #F9F6EE;
+  --color-velvet: #4A154B;
+}
+
+@utility bg-grid-gold {
+  background-size: 60px 60px;
+  background-image: 
+    linear-gradient(to right, rgba(229, 193, 88, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(229, 193, 88, 0.03) 1px, transparent 1px);
+}
+
+@utility glow-gold {
+  box-shadow: 0 0 25px 0px rgba(229, 193, 88, 0.25);
+}
+
+@utility text-glow-gold {
+  text-shadow: 0 0 10px rgba(229, 193, 88, 0.4);
+}
+
+@utility cursor-none-desktop {
+  @media (min-width: 1024px) {
+    cursor: none;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: #121212;
+}
+
+body {
+  font-family: var(--font-sans);
+  color: var(--color-beige);
+  background-color: #121212;
+  overflow-x: hidden;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #121212;
+}
+::-webkit-scrollbar-thumb {
+  background: #E5C158;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #cba847;
+}
